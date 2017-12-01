@@ -1,0 +1,65 @@
+{% extends "demo/base.html" %}
+
+{% load wagtailcore_tags demo_tags wagtailimages_tags %}
+
+<!-- Intro -->
+{% block content %}
+<div class="container-fluid">
+  <div class="col-sm-10">
+    {% include "demo/includes/intro.html" with intro=self.intro only %}
+
+    {% if request.GET.tag|length %}
+      <h4>Showing posts tagged as <span class="blogbtn btn-primary btn-xs">{{ request.GET.tag }}</span></h4>
+      <h4><a href=" {% pageurl self %} ">Show all posts</a></h4>
+    {% endif %}
+    <div class="list-group">
+      {# Uses serve method defined in models.py - allows for paging if required #}
+      {# See also standard index for creating a listing with a tag #}
+      {% for blog in blogs %}
+        {% include "demo/includes/blog_list_item.html" %}
+      {% empty %}
+        No blogs found
+      {% endfor %}
+    </div>
+
+  {# Pagination - uses django.core.paginator #}
+  {# Append any other url query string variables to the next and previous links - allows tag to be passed through #}
+    <div class="row">
+      <div class="col-sm-4 previous">
+        {% if blogs.has_previous %}
+          <a href="?page={{ blogs.previous_page_number }}{% for key,value in request.GET.items %}{% ifnotequal key 'page' %}&amp;{{ key }}={{ value }}{% endifnotequal %}{% endfor %}">Previous</a>
+        {% endif %}
+      </div>
+      <div class="col-sm-4 pages">
+        Page {{ blogs.number }} of {{ blogs.paginator.num_pages }}
+      </div>
+      <div class="col-sm-4 next">
+        {% if blogs.has_next %}
+          <a href="?page={{ blogs.next_page_number }}{% for key,value in request.GET.items %}{% ifnotequal key 'page' %}&amp;{{ key }}={{ value }}{% endifnotequal %}{% endfor %}">Next</a>
+        {% endif %}
+      </div>
+    </div>
+
+  {% include "demo/includes/related_links.html" with related_links=self.related_links.all only %}
+
+  </div>
+  <!-- Rigt side column Tags list -->
+  <div class="col-sm-2">
+  	<h2>Tags by Category</h2>
+  	{% for category in categories %}
+      <a>
+        {{ category }}
+      </a>
+    {% endfor %}
+    <h2>All Tags</h2>
+    {% for tag in tags %}
+      <!-- Pageurl is this page (self) -->
+      <!-- Show pages where ?tag = variable tag -->
+      <a href="{% pageurl self %}?tag={{ tag }}"
+        class="blogbtn btn btn-primary btn-xs">
+        {{ tag }}
+      </a>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

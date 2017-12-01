@@ -1,0 +1,31 @@
+{% extends "demo/base.html" %}
+{% load demo_tags %}
+<!-- Heading -->
+{% block heading %}
+    <!-- Calls carousel which is edited in Home page -->
+    {% include "demo/includes/carousel.html" with carousel_items=self.carousel_items.all only %}
+{% endblock %}
+
+
+
+{% block content %}
+<div class="homepage jumbotron text-center">
+	TheMightyBinary.<span style="font-size: 0.5em;">com</span><br>
+	<span style="font-size: 0.3em; color: #C06014;">A tech blog and and a place to keep my notes</span>
+</div>
+
+    {% if self.body %}
+        <div class="body-content">
+            {% include "demo/includes/streamfield.html" with content=self.body %}
+        </div>
+    {% endif %}
+
+    {% person_listing_homepage %}
+
+    <!-- Recent blog posts list -->
+    {% blog_listing_homepage %}
+
+    {% event_listing_homepage %}
+
+   
+{% endblock %}

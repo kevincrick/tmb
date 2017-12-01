@@ -1,0 +1,4 @@
+/wagtaildemo/settings/local.py
+/wagtaildemo/settings/base.py
+*.pyc
+/envwag

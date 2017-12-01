@@ -1,0 +1,71 @@
+{% extends "demo/base.html" %}
+{% load wagtailcore_tags demo_tags wagtailimages_tags %}
+
+<!-- Blog Page heading (above thin grey line) -->
+<!-- 
+Disabled for now. See base.html for heading
+{% block heading %}
+  <div class="blogpageheader page-header">
+    <h1>
+      {{ self.title }}
+      {% if self.date %}<small>{{ self.date }}</small>{% endif %}
+    </h1>
+  </div>
+{% endblock %}
+-->
+
+{% block content %}
+<div class="container-fluid">
+  <!-- Left column and thin grey line between columns -->
+  <div class="col-sm-10">
+  {% include "demo/includes/carousel.html" with carousel_items=self.carousel_items.all only %}
+
+  <!-- Blog Heading   
+  <div class="blogheading pull-left">
+    <h1>{{ page.title }}</h1>
+  </div>
+  -->
+
+
+
+  {% if self.body %}
+    <div class="body-content">
+      {% include "demo/includes/streamfield.html" with content=self.body %}
+    </div>
+  {% endif %}
+
+  {% include "demo/includes/related_links.html" with related_links=self.related_links.all only %}
+  </div>
+
+  <!-- Rigt side column showing Tags list-->
+  <div class="col-sm-2">
+    {% with categories=page.categories.all %}
+      {% if categories %}
+        <h2>Categories</h2>
+          {% for category in categories %}
+            <span style="display: inline">
+              {% image category.icon fill-32x32 style="vertical-align: middle" %}
+              {{ category.name }}
+            </span>
+          {% endfor %}
+      {% endif %}
+    {% endwith %}
+    <!-- This Blogs's Tags -->
+    <h2>This Blog</h2></span>
+    {% for tag in self.tags.all %}
+      <a href="{% pageurl self.blog_index %}?tag={{ tag }}"
+         class="blogbtn btn btn-primary btn-xs">{{ tag }}
+      </a>
+    {% endfor %}
+    <h2>All Tags</h2>
+    {% for tag in tags %}
+      <!-- Pageurl is this page (self) -->
+      <!-- Show pages where ?tag = variable tag -->
+      <a href="{% pageurl self.blog_index %}?tag={{ tag }}"
+        class="blogbtn btn btn-primary btn-xs">
+        {{ tag }}
+      </a>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

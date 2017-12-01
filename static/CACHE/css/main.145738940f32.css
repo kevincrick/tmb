@@ -1,0 +1,245 @@
+/* https://www.americancrew.com/allstarchallenge/ */
+/* #C06014 - Ochre  */
+/* #EDDBCD - Pastel Peach */
+/* #000000 - Black */
+/* #CDCDCd - Grey */
+/* #FFFFFF - White */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700);
+/* line 15, D:/Box Sync/Website/wagtaildemo/demo/static/demo/css/main.scss */
+html {
+  background-color: whitesmoke; }
+
+/* ============== All pages ============== */
+/* \templates\demo\tags\top_menu.html */
+/* line 22, D:/Box Sync/Website/wagtaildemo/demo/static/demo/css/main.scss */
+.navbar {
+  background-color: #000000; }
+
+/* Space around buttons */
+/* line 27, D:/Box Sync/Website/wagtaildemo/demo/static/demo/css/main.scss */
+.blogbtn {
+  margin-right: 5px;
+  margin-top: 5px;
+  background-color: #C06014;
+  border: none; }
+
+/* line 33, D:/Box Sync/Website/wagtaildemo/demo/static/demo/css/main.scss */
+.blogbtn:hover {
+  background-color: #000000; }
+
+/* \templates\demo\base.html */
+/* line 37, D:/Box Sync/Website/wagtaildemo/demo/static/demo/css/main.scss */
+.main {
+  padding-top: 66px;
+  min-height: 700px; }
+
+/* ============== Home page ============== */
+/* line 42, D:/Box Sync/Website/wagtaildemo/demo/static/demo/css/main.scss */
+.homepage {
+  background-color: black;
+  font-size: 6em;
+  font-family: times;
+  color: white; }
+
+/* ============== Blog index page ============== */
+/* Thin grey line between middle and Right column */
+/* line 52, D:/Box Sync/Website/wagtaildemo/demo/static/demo/css/main.scss */
+.col-sm-10 {
+  padding-right: 20px;
+  border-right: 1px solid #ccc; }
+
+/* Blog list */
+/* line 57, D:/Box Sync/Website/wagtaildemo/demo/static/demo/css/main.scss */
+.list-group .list-group-item {
+  border-color: #C06014; }
+
+/* line 61, D:/Box Sync/Website/wagtaildemo/demo/static/demo/css/main.scss */
+.list-group .list-group-item:hover {
+  background-color: #EDDBCD; }
+
+/* ============== Blog pages ============== */
+/* line 68, D:/Box Sync/Website/wagtaildemo/demo/static/demo/css/main.scss */
+.blogpageheader {
+  color: #C06014; }
+
+/* demo\templates\demo\blog_page.html */
+/* line 73, D:/Box Sync/Website/wagtaildemo/demo/static/demo/css/main.scss */
+.blogheading {
+  color: #C06014; }
+
+/* line 76, D:/Box Sync/Website/wagtaildemo/demo/static/demo/css/main.scss */
+.glyphicon {
+  color: #C06014; }
+
+/* line 79, D:/Box Sync/Website/wagtaildemo/demo/static/demo/css/main.scss */
+.glyphicon:hover {
+  color: #EDDBCD; }
+
+/* ============== Streamfield Blocks ============== */
+/* Intro */
+/* line 85, D:/Box Sync/Website/wagtaildemo/demo/static/demo/css/main.scss */
+.well {
+  background-color: #EDDBCD; }
+
+/* line 88, D:/Box Sync/Website/wagtaildemo/demo/static/demo/css/main.scss */
+.note {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  background-color: #aed6f1;
+  line-height: 70%;
+  padding: 10px; }
+
+/* line 96, D:/Box Sync/Website/wagtaildemo/demo/static/demo/css/main.scss */
+.warning {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  background-color: #fadbd8;
+  line-height: 70%;
+  padding: 10px; }
+
+/* line 104, D:/Box Sync/Website/wagtaildemo/demo/static/demo/css/main.scss */
+.tip {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  background-color: #d5f5e3;
+  line-height: 70%;
+  padding: 10px; }
+
+/* fonts */
+/* line 115, D:/Box Sync/Website/wagtaildemo/demo/static/demo/css/main.scss */
+body {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif; }
+
+/* body image styles - classes supplied by rich text editor */
+/* line 119, D:/Box Sync/Website/wagtaildemo/demo/static/demo/css/main.scss */
+.body-content {
+  width: 100%;
+  overflow: hidden;
+  clear: both;
+  margin-bottom: 1em; }
+  /* line 124, D:/Box Sync/Website/wagtaildemo/demo/static/demo/css/main.scss */
+  .body-content img {
+    margin-bottom: 2%;
+    margin-top: 2%; }
+  /* line 129, D:/Box Sync/Website/wagtaildemo/demo/static/demo/css/main.scss */
+  .body-content img.full-width {
+    width: 100%; }
+  /* line 133, D:/Box Sync/Website/wagtaildemo/demo/static/demo/css/main.scss */
+  .body-content img.left {
+    width: 45%;
+    margin-right: 5%;
+    float: left; }
+  /* line 139, D:/Box Sync/Website/wagtaildemo/demo/static/demo/css/main.scss */
+  .body-content img.right {
+    width: 45%;
+    margin-left: 5%;
+    float: right; }
+  /* line 145, D:/Box Sync/Website/wagtaildemo/demo/static/demo/css/main.scss */
+  .body-content h2 {
+    color: #C06014;
+    clear: both; }
+
+/* Image */
+/* line 152, D:/Box Sync/Website/wagtaildemo/demo/static/demo/css/main.scss */
+.img-wrapper {
+  margin-bottom: 1em;
+  position: relative; }
+  /* line 156, D:/Box Sync/Website/wagtaildemo/demo/static/demo/css/main.scss */
+  .img-wrapper img {
+    display: block;
+    width: 100%;
+    margin-bottom: 0; }
+  /* line 162, D:/Box Sync/Website/wagtaildemo/demo/static/demo/css/main.scss */
+  .img-wrapper.left {
+    float: left;
+    width: 45%;
+    margin-right: 5%; }
+  /* line 167, D:/Box Sync/Website/wagtaildemo/demo/static/demo/css/main.scss */
+  .img-wrapper.right {
+    float: right;
+    width: 45%;
+    margin-left: 5%; }
+
+/* line 174, D:/Box Sync/Website/wagtaildemo/demo/static/demo/css/main.scss */
+.intro {
+  font-size: 1.4em; }
+
+/* line 178, D:/Box Sync/Website/wagtaildemo/demo/static/demo/css/main.scss */
+.caption {
+  padding: 0.2em 1em 0.2em 0.5em;
+  margin: 0;
+  font-weight: 400;
+  background: #F2f2f2;
+  font-style: italic;
+  display: inline-block;
+  z-index: 2;
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  font-size: 0.9em;
+  max-width: calc(100% - 10px); }
+  /* line 192, D:/Box Sync/Website/wagtaildemo/demo/static/demo/css/main.scss */
+  .caption p {
+    margin: 0 !important; }
+
+/* line 197, D:/Box Sync/Website/wagtaildemo/demo/static/demo/css/main.scss */
+blockquote {
+  margin: 2em 0; }
+  /* line 200, D:/Box Sync/Website/wagtaildemo/demo/static/demo/css/main.scss */
+  blockquote span {
+    display: block;
+    color: #AAA;
+    font-size: 0.8em; }
+
+/* List styling - tweaks to include images */
+/* line 210, D:/Box Sync/Website/wagtaildemo/demo/static/demo/css/main.scss */
+a.list-group-item {
+  clear: both;
+  width: 100%;
+  overflow: hidden; }
+  /* line 214, D:/Box Sync/Website/wagtaildemo/demo/static/demo/css/main.scss */
+  a.list-group-item .list-group-item-text {
+    margin-top: 1%; }
+    /* line 216, D:/Box Sync/Website/wagtaildemo/demo/static/demo/css/main.scss */
+    a.list-group-item .list-group-item-text img {
+      float: left;
+      margin-right: 2%;
+      margin-bottom: 1%; }
+
+/* Style pager */
+/* line 225, D:/Box Sync/Website/wagtaildemo/demo/static/demo/css/main.scss */
+.col-sm-4.pages {
+  text-align: center; }
+
+/* line 229, D:/Box Sync/Website/wagtaildemo/demo/static/demo/css/main.scss */
+.col-sm-4.next {
+  text-align: right; }
+
+/* line 235, D:/Box Sync/Website/wagtaildemo/demo/static/demo/css/main.scss */
+.carousel {
+  margin-bottom: 15px; }
+  /* line 237, D:/Box Sync/Website/wagtaildemo/demo/static/demo/css/main.scss */
+  .carousel .carousel-caption {
+    background-color: rgba(0, 127, 127, 0.6);
+    padding-top: 0; }
+    /* line 240, D:/Box Sync/Website/wagtaildemo/demo/static/demo/css/main.scss */
+    .carousel .carousel-caption .btn {
+      margin-bottom: 10px; }
+
+/* line 246, D:/Box Sync/Website/wagtaildemo/demo/static/demo/css/main.scss */
+p {
+  text-align: justify; }
+  /* line 249, D:/Box Sync/Website/wagtaildemo/demo/static/demo/css/main.scss */
+  p:last-child {
+    margin-bottom: 0; }
+
+/* line 254, D:/Box Sync/Website/wagtaildemo/demo/static/demo/css/main.scss */
+.advert-list {
+  margin-top: 15px;
+  margin-bottom: 0;
+  padding: 15px 0;
+  background-color: whitesmoke;
+  border-top: 1px solid #b5b5b5; }

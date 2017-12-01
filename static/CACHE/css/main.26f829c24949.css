@@ -1,0 +1,189 @@
+/* #C06014 - Ochre  */
+/* #EDDBCD - Pastel Peach */
+/* #000000 - Black */
+/* #CDCDCd - Grey */
+/* #FFFFFF - White */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700);
+html {
+  background-color: whitesmoke; }
+
+/* ============== All pages ============== */
+/* \templates\demo\tags\top_menu.html */
+.navbar {
+  background-color: #000000; }
+
+/* Space around buttons */
+.blogbtn {
+  margin-right: 5px;
+  margin-top: 5px;
+  background-color: #C06014;
+  border: none; }
+
+.blogbtn:hover {
+  background-color: #000000; }
+
+/* \templates\demo\base.html */
+.main {
+  padding-top: 66px;
+  min-height: 700px; }
+
+/* ============== Home page ============== */
+/* ============== Blog index page ============== */
+/* Thin grey line between middle and Right column */
+.col-sm-10 {
+  padding-right: 20px;
+  border-right: 1px solid #ccc; }
+
+/* Blog list */
+.list-group .list-group-item:hover {
+  background-color: #EDDBCD; }
+
+/* ============== Blog pages ============== */
+.blogpageheader {
+  color: #C06014; }
+
+/* demo\templates\demo\blog_page.html */
+.blogheading {
+  color: #C06014; }
+
+.glyphicon {
+  color: #C06014; }
+
+/* ============== Streamfield Blocks ============== */
+/* Intro */
+.well {
+  background-color: #EDDBCD; }
+
+.note {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  background-color: #aed6f1;
+  line-height: 70%;
+  padding: 10px; }
+
+.warning {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  background-color: #fadbd8;
+  line-height: 70%;
+  padding: 10px; }
+
+.tip {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  background-color: #d5f5e3;
+  line-height: 70%;
+  padding: 10px; }
+
+/* fonts */
+body {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif; }
+
+/* body image styles - classes supplied by rich text editor */
+.body-content {
+  overflow: hidden;
+  clear: both;
+  margin-bottom: 1em; }
+  .body-content img {
+    margin-bottom: 2%;
+    margin-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%; }
+  .body-content img.full-width {
+    width: 100%; }
+  .body-content img.left {
+    width: 45%;
+    margin-right: 5%;
+    float: left; }
+  .body-content img.right {
+    width: 45%;
+    margin-left: 5%;
+    float: right; }
+  .body-content h2 {
+    color: #C06014;
+    clear: both; }
+
+.img-wrapper {
+  margin-bottom: 1em;
+  position: relative; }
+  .img-wrapper img {
+    display: block;
+    width: 100%;
+    margin-bottom: 0; }
+  .img-wrapper.left {
+    float: left;
+    width: 45%;
+    margin-right: 5%; }
+  .img-wrapper.right {
+    float: right;
+    width: 45%;
+    margin-left: 5%; }
+
+.intro {
+  font-size: 1.4em; }
+
+.caption {
+  padding: 0.2em 1em 0.2em 0.5em;
+  margin: 0;
+  font-weight: 400;
+  background: #F2f2f2;
+  font-style: italic;
+  display: inline-block;
+  z-index: 2;
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  font-size: 0.9em;
+  max-width: calc(100% - 10px); }
+  .caption p {
+    margin: 0 !important; }
+
+blockquote {
+  margin: 2em 0; }
+  blockquote span {
+    display: block;
+    color: #AAA;
+    font-size: 0.8em; }
+
+/* List styling - tweaks to include images */
+a.list-group-item {
+  clear: both;
+  width: 100%;
+  overflow: hidden; }
+  a.list-group-item .list-group-item-text {
+    margin-top: 1%; }
+    a.list-group-item .list-group-item-text img {
+      float: left;
+      margin-right: 2%;
+      margin-bottom: 1%; }
+
+/* Style pager */
+.col-sm-4.pages {
+  text-align: center; }
+
+.col-sm-4.next {
+  text-align: right; }
+
+.carousel {
+  margin-bottom: 15px; }
+  .carousel .carousel-caption {
+    background-color: rgba(0, 127, 127, 0.6);
+    padding-top: 0; }
+    .carousel .carousel-caption .btn {
+      margin-bottom: 10px; }
+
+p {
+  text-align: justify; }
+  p:last-child {
+    margin-bottom: 0; }
+
+.advert-list {
+  margin-top: 15px;
+  margin-bottom: 0;
+  padding: 15px 0;
+  background-color: whitesmoke;
+  border-top: 1px solid #b5b5b5; }
